@@ -8,16 +8,6 @@ using namespace std;
 
 int main(int argc, char* argv[]) 
 {
-    tesseract::ResultIterator* iterator = tess.GetIterator();
-    tesseract::PageIteratorLevel level = tesseract::RIL_WORD;
-    if (iterator != NULL) {
-        do {
-            float x1, y1, x2, y2;
-            iterator->BoundingBox(level, &x1, &y1, &x2, &y2);
-            cv::Rect boundingBox(cv::Point(x1, y1), cv::Point(x2, y2));
-            cv::rectangle(inputImage, boundingBox, cv::Scalar(0, 0, 255), 2);
-        } while (iterator->Next(level));
-
     Mat img = imread(argv[1]); 
     Mat gray;
     cvtColor(img, gray, COLOR_BGR2GRAY);
@@ -32,9 +22,22 @@ int main(int argc, char* argv[])
     return 0;
 
 
+    tesseract::ResultIterator* iterator = tess.GetIterator();
+    tesseract::PageIteratorLevel level = tesseract::RIL_WORD;
+    if (iterator != NULL) {
+        do {
+            float x1, y1, x2, y2;
+            iterator->BoundingBox(level, &x1, &y1, &x2, &y2);
+            cv::Rect boundingBox(cv::Point(x1, y1), cv::Point(x2, y2));
+            cv::rectangle(inputImage, boundingBox, cv::Scalar(0, 0, 255), 2);
+        } while (iterator->Next(level));
+
+    
+
     }  
+}
 
 
 
-    ]
+    
 
