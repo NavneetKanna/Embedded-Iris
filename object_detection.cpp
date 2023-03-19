@@ -1,19 +1,13 @@
 
 // g++ -I/home/pi/darknet/include -I/usr/include/opencv4  object_detection.cpp -o darknt `pkg-config --libs opencv4` -L/home/pi/darknet -ldarknet 
 
-
-
-
-// Include Libraries.
 #include <opencv2/opencv.hpp>
 #include <fstream>
 
-// Namespaces.
 using namespace cv;
 using namespace std;
 using namespace cv::dnn;
 
-// Constants.
 const float INPUT_WIDTH = 640.0;
 const float INPUT_HEIGHT = 640.0;
 const float SCORE_THRESHOLD = 0.5;
@@ -22,7 +16,6 @@ const float CONFIDENCE_THRESHOLD = 0.45;
 
 vector<Mat> pre_process(Mat &input_image, Net &net)
 {
-    // Convert to blob.
     Mat blob;
     blobFromImage(input_image, blob, 1./255., Size(INPUT_WIDTH, INPUT_HEIGHT), Scalar(), true, false);
 
@@ -36,19 +29,14 @@ vector<Mat> pre_process(Mat &input_image, Net &net)
 }
 
 
-Mat post_process(Mat input_image, vector<Mat> &outputs, const vector<string> &class_name) 
+void post_process(Mat input_image, vector<Mat> &outputs, const vector<string> &class_name) 
 {
     // Initialize vectors to hold respective outputs while unwrapping detections.
     vector<int> class_ids;
     vector<float> confidences;
 
-    // Resizing factor.
-    float x_factor = input_image.cols / INPUT_WIDTH;
-    float y_factor = input_image.rows / INPUT_HEIGHT;
-
     float *data = (float *)outputs[0].data;
 
-    const int dimensions = 85;
     const int rows = 25200;
     // Iterate through 25200 detections.
     for (int i = 0; i < rows; ++i) 
@@ -71,13 +59,12 @@ Mat post_process(Mat input_image, vector<Mat> &outputs, const vector<string> &cl
                 confidences.push_back(confidence);
                 class_ids.push_back(class_id.x);
             }
-
         }
         // Jump to the next column.
         data += 85;
     }
 
-    // Perform Non Maximum Suppression and draw predictions.
+    // Perform Non Maximum Suppression 
     vector<int> indices;
     std::cout<<"nms"<<std::endl;
     NMSBoxes(boxes, confidences, SCORE_THRESHOLD, NMS_THRESHOLD, indices);
@@ -93,8 +80,6 @@ Mat post_process(Mat input_image, vector<Mat> &outputs, const vector<string> &cl
         label = class_name[class_ids[idx]] + ":" + label;
         std::cout<<"Detected object: "<<label<<std::endl;
     }
-    std::cout<<"finished"<<std::endl;
-    return input_image;
 }
 
 
@@ -131,11 +116,8 @@ int main()
     std::cout<<"finished"<<std::endl;
 
     std::cout<<"post process"<<std::endl;
-    Mat img = post_process(frame.clone(), detections, class_list);
+    post_process(frame.clone(), detections, class_list);
     std::cout<<"finished"<<std::endl;
-
-    imshow("Output", img);
-    waitKey(0);
 
     return 0;
 }
