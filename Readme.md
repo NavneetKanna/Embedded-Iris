@@ -2,11 +2,11 @@
 
 -------------------------------------------------------------------------
 
-Welcome to our Embedded Lab course project! Our mission is to empower visually impaired individuals in their daily lives. We've designed a unique wearable device that combines Raspberry Pi 3, a camera, and a speaker to assist users with real-time object recognition and text-to-speech functionality.
+Welcome to our course project for the Embedded Lab! Our goal is to improve the daily lives of people who are blind or visually impaired. We created a novel wearable that combines a Raspberry Pi 3, a camera, and a speaker to offer users text-to-speech functionality and real-time object identification.
 
-Our device currently features OCR and object detection capabilities, which means that it can recognize objects and text in real-time. Imagine walking through a supermarket and having our device read out the name of each item you pass by. Or, being able to hear the names of signs and labels around you as you move through a busy street.
+Our device can presently recognise objects and text in real-time thanks to OCR and object detection technologies. Imagine using our technology to read out the names of each item you pass by as you browse a supermarket. Alternatively, hearing the titles of labels and signs surrounding you as you walk down a crowded street.
 
-We're committed to making our device as intuitive and user-friendly as possible, with the goal of improving the quality of life for visually impaired individuals. Thank you for your interest in our project!
+We're committed to make our product as simple and user-friendly as we can in order to enhance quality of life.
 
 
 ---------------------------------------------------------------------------
