@@ -11,7 +11,7 @@ We're committed to make our product as simple and user-friendly as we can in ord
 
 ---------------------------------------------------------------------------
 
-##Components List
+# Components List
 
 ---------------------------------------------------------------------------
 
@@ -40,7 +40,8 @@ Power-over-Ethernet (PE) support (requires separate PoE HAT)
 
 Raspberry Pi Camera Module
 
-------------------------------------------------------------------------------![camera](https://user-images.githubusercontent.com/123874995/226483843-fc016b75-4409-4163-ad12-c366a93adab9.jpg)
+------------------------------------------------------------------------------
+![camera](https://user-images.githubusercontent.com/123874995/226483843-fc016b75-4409-4163-ad12-c366a93adab9.jpg)
 
 Sensor: Sony IMX708
 Resolution: 11.9 megapixels
