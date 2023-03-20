@@ -1,6 +1,6 @@
 # Embedded-Iris
 
--------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
 Welcome to our course project for the Embedded Lab! Our goal is to improve the daily lives of people who are blind or visually impaired. We created a novel wearable that combines a Raspberry Pi 3, a camera, and a speaker to offer users text-to-speech functionality and real-time object identification.
 
@@ -11,5 +11,10 @@ We're committed to make our product as simple and user-friendly as we can in ord
 
 ---------------------------------------------------------------------------
 
-## Componet List
+##Components List
+
+---------------------------------------------------------------------------
+
+Rapberry Pi 3 Model B+
+![raspberry pi](https://user-images.githubusercontent.com/123874995/226483366-cadbc80d-25ac-475b-89a8-7435614effe1.jpg)
 
