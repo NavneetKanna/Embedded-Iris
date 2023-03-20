@@ -1,4 +1,29 @@
+#include <opencv2/opencv.hpp>
+#include <fstream>
 
+using namespace cv;
+using namespace std;
+using namespace cv::dnn;
+
+const float INPUT_WIDTH = 640.0;
+const float INPUT_HEIGHT = 640.0;
+const float SCORE_THRESHOLD = 0.5;
+const float NMS_THRESHOLD = 0.45;
+const float CONFIDENCE_THRESHOLD = 0.45;
+
+vector<Mat> pre_process(Mat &input_image, Net &net)
+{
+    Mat blob;
+    blobFromImage(input_image, blob, 1./255., Size(INPUT_WIDTH, INPUT_HEIGHT), Scalar(), true, false);
+
+    net.setInput(blob);
+
+    // Forward propagate.
+    vector<Mat> outputs;
+    net.forward(outputs, net.getUnconnectedOutLayersNames());
+
+    return outputs;
+}
 // g++ -I/home/pi/darknet/include -I/usr/include/opencv4  object_detection.cpp -o darknt `pkg-config --libs opencv4` -L/home/pi/darknet -ldarknet 
 
 
