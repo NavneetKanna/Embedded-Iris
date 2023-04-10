@@ -1,0 +1,44 @@
+import time
+import pigpio
+
+# Set up the pigpio library and the GPIO pins for the ultrasonic sensor
+pi = pigpio.pi(
+duration = stop_time - start_time
+    distance = duration * 34300 / 2
+    
+    return distance
+
+# Continuously measure the distance and print the result
+while True:
+    distance = measure_distance()
+    print("Distance: {:.2f} cm".format(distance))
+    time.sleep(1))
+trig_pin = 23
+echo_pin = 24
+
+# Define a function to measure the distance using the ultrasonic sensor
+def measure_distance():
+    # Send a pulse to the ultrasonic sensor to trigger the measurement
+    pi.write(trig_pin, pigpio.HIGH)
+    time.sleep(0.00001)
+    pi.write(trig_pin, pigpio.LOW)
+    
+    # Wait for the echo signal to be received
+    start_time = time.time()
+    stop_time = time.time()
+    while pi.read(echo_pin) == pigpio.LOW:
+        start_time = time.time()
+    while pi.read(echo_pin) == pigpio.HIGH:
+        stop_time = time.time()
+    
+    # Calculate the distance based on the time taken for the echo signal to be received
+    duration = stop_time - start_time
+    distance = duration * 34300 / 2
+    
+    return distance
+
+# Continuously measure the distance and print the result
+while True:
+    distance = measure_distance()
+    print("Distance: {:.2f} cm".format(distance))
+    time.sleep(1)
