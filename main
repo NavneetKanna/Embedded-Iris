@@ -7,10 +7,10 @@
 
 int main() {
     // Initialize wiringPi and set pins
-    if (wiringPiSetupGpio() == -1) {
-        std::cout << "wiringPiSetup failed." << std::endl;
-        return 1;
-    }
+    //if (wiringPiSetupGpio() == -1) {
+      //  std::cout << "wiringPiSetup failed." << std::endl;
+      //  return 1;
+   // }
 
     pinMode(TRIG_PIN, OUTPUT);
     pinMode(ECHO_PIN, INPUT);
