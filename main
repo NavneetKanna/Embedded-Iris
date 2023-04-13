@@ -36,7 +36,10 @@ int main() {
         float distance = duration * 0.0343 / 2;
 
         // Print the distance to the console
-        std::cout << "Distance: " << distance << " cm" << std::endl;
+        if ( 100 > duration > 50):
+            std::cout << "An obstacle is detected " << distance << " centimeter before you" << std::endl;
+        elseif ( duration < 50 ):
+            std::cout << "An obstacle is detected very close to you" << std::endl;
 
         // Wait for 1 second before taking another measurement
         sleep(1);
