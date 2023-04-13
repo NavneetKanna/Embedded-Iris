@@ -33,7 +33,7 @@ int main() {
 
         // Calculate the distance based on the time it took for the sound wave to travel
         uint32_t duration = end_time - start_time;
-        float distance = duration * 0.034 / 2;
+        float distance = duration * 0.0343 / 2;
 
         // Print the distance to the console
         std::cout << "Distance: " << distance << " cm" << std::endl;
