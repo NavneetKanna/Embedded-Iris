@@ -1,7 +1,14 @@
 #include <iostream>
+#include <cstdio>
+#include <chrono>
+#include <thread>
+#include <string>
 #include <opencv2/opencv.hpp>
+#include <opencv2/imgproc.hpp>
 #include <tesseract/baseapi.h>
 #include <leptonica/allheaders.h>
+#include <opencv2/highgui.hpp>
+#include <opencv2/dnn.hpp>
 
 using namespace cv;
 using namespace std;
@@ -31,35 +38,48 @@ int main(int argc, char* argv[])
     findContours(thresh, contours, RETR_LIST, CHAIN_APPROX_SIMPLE);
    
     
+     int largest = 0;
+    Rect large;
+    // Loop through each contour(text region)
     for (size_t i = 0; i < contours.size(); i++) {
         Rect rect = boundingRect(contours[i]);
-        double aspectRatio = rect.width / (double)rect.height;
-        // Check for only valid text regions
-        if (aspectRatio > 1.0 && aspectRatio < 10.0 && rect.area() > 50 && rect.height > 10) {
-            //rectangle(img, rect, Scalar(0, 0, 255), 2);
-            // Pre-Processing for OCR 
-            Mat roi = img(rect);
-            Mat resized_img;
-            resize(roi, resized_img, Size(), 1.2, 1.2);  
-            Mat roi_gray;
-            cvtColor(roi, roi_gray, COLOR_BGR2GRAY);
-            Mat kernel = getStructuringElement(MORPH_RECT, Size(1, 1));
-            dilate(roi_gray, roi_gray, kernel, Point(-1, -1), 1);
-            erode(roi_gray, roi_gray, kernel, Point(-1, -1), 1);
-            medianBlur(roi_gray, roi_gray, 3);
-            threshold(roi_gray, roi_gray, 0, 255, THRESH_BINARY+THRESH_OTSU);
-            
-            // Perform OCR
-            ocr->SetImage((uchar*)roi_gray.data, roi_gray.cols, roi_gray.rows, 1, roi_gray.step);
-            //ocr->SetImage(resized_img.data, resized_img.cols, resized_img.rows, 3, resized_img.step);
-            //ocr->SetImage(roi.data, roi.cols, roi.rows, 3, roi.step);
-            ocr->SetSourceResolution(300);
-            string text = ocr->GetUTF8Text();
-            //std::cout<<"text " <<text<<std::endl;
-            ocr_result += text + " ";
+        //std::cout<<"detected rect"<<std::endl;
+        if (rect.area() > largest) {
+        std::cout<<"detected large rect"<<std::endl;
+         large = rect;
+         largest = rect.area();
         }
     }
     
+    
+    double aspectRatio = large.width / (double)large.height;
+     
+    Mat roi = img(large);
+    imwrite("tt.jpg", roi);
+    Mat resized_img;
+    resize(roi, resized_img, Size(), 1.2, 1.2);  
+    Mat roi_gray;
+    cvtColor(roi, roi_gray, COLOR_BGR2GRAY);
+    Mat kernel = getStructuringElement(MORPH_RECT, Size(1, 1));
+    dilate(roi_gray, roi_gray, kernel, Point(-1, -1), 1);
+    erode(roi_gray, roi_gray, kernel, Point(-1, -1), 1);
+    medianBlur(roi_gray, roi_gray, 3);
+    threshold(roi_gray, roi_gray, 0, 255, THRESH_BINARY+THRESH_OTSU);
+    
+    // Perform OCR
+    ocr->Init(NULL, "eng", tesseract::OEM_LSTM_ONLY);
+    // ocr->Init(NULL, "eng", tesseract::OEM_LSTM_ONLY);
+    ocr->SetPageSegMode(tesseract::PSM_AUTO);
+    ocr->SetImage((uchar*)roi_gray.data, roi_gray.cols, roi_gray.rows, 1, roi_gray.step);
+    //ocr->SetImage(resized_img.data, resized_img.cols, resized_img.rows, 3, resized_img.step);
+    //ocr->SetImage(roi.data, roi.cols, roi.rows, 3, roi.step);
+    ocr->SetSourceResolution(300);
+    string text = ocr->GetUTF8Text();
+    ocr_result = "";
+    if(!text.empty()){
+        ocr_result = text + " ";
+    }
+
 
     }  
 }
