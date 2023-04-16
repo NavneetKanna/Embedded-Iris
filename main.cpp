@@ -17,7 +17,11 @@
 
 using namespace std;
 bool flag = true;
-bool oflag = true;
+bool od_flag = true;
+bool obs_flag = true;
+bool ocr_flag = true;
+bool po_flag = true;
+
 
 bool is_running = false; 
 bool is_sensor_on = false; 
@@ -29,30 +33,41 @@ ObstacleDetection obs;
     
     
 void poweroff(){
+if (po_flag){
+po_flag = false;
 std::cout<<"Finishing main"<<std::endl;
-//flag = false;
+flag = false;
+po_flag = true;
+}
 }
 
 
 void start_ocr(){
-
-    oflag = false;
+if (ocr_flag) {
+    ocr_flag = false;
  std::cout<<"start_ocr"<<std::endl;
  ocr.start();
-
+ocr_flag = true;
+}
 
 }
 
 void start_obs(){
+if (obs_flag) {
+  obs_flag = false;
   std::cout<<"start_obs"<<std::endl;
   obs.begin();
+ obs_flag = true;
+}
 }
 
 void start_od(){
- 
-        oflag = false;
+ if(od_flag) {
+   od_flag = false;
   std::cout<<"start_od"<<std::endl;
   od.start();
+  od_flag = true;
+ }
 }
 
 int main() {
