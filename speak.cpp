@@ -56,6 +56,11 @@ void Speak::text_to_speech(string text){
    
    
    std::cout<<"In speak text to speech   "<< text.c_str()<<std::endl;
+    std::cout<<"text size " << text.size() <<std::endl;
+   
+  /* if (text.empty()) {
+      std::cout<<"in if"<<std::endl;
+      std::string tta = "Could not detect";
    char voicename[] = {"English"}; 
    int buflength = 1024, options = 0;
    position_type = POS_CHARACTER;
