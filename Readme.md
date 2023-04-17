@@ -56,7 +56,7 @@ make
 Here is the final product of our project:
 
 <p align="center">
-<img src="https://github.com/NavneetKanna/Embedded-Iris/blob/main/Images/final.jpg?raw=true" width="250" height="250">
+<img src="https://github.com/NavneetKanna/Embedded-Iris/blob/main/Images/final.jpg?raw=true" width="450" height="350">
 </p>
 
 To use the project, the first step is to turn on the Raspberry Pi and run the executable. Once the program is running, you should hear the message "Embedded Iris is now ready to use". At this point, the program waits for the user to press one of the buttons, which triggers a specific task via interrupts and callbacks.
