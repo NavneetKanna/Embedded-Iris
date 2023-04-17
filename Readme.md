@@ -7,9 +7,9 @@
 </p>
 
 
-Welcome to our course project for the Embedded Lab! Our goal is to assist the visually imapired in their daily lives. We created a novel wearable that combines a Raspberry Pi 3, a camera, and a speaker to assist text-to-speech functionality and real-time object identification.
+Welcome to our course project for the Embedded Lab! Our goal is to assist the visually imapired in their daily lives. We created a novel wearable that combines a Raspberry Pi 3, a camera, and a speaker to provide text-to-speech functionality and real-time object identification and clasificaition.
 
-Our device can presently recognise objects and text in real-time thanks to OCR and object detection technologies. Imagine using our technology to read out the names of each item you pass by as you browse a supermarket. Alternatively, hearing the titles of labels and signs surrounding you as you walk down a crowded street.
+Our device can presently recognise objects and text in real-time buy using CV library along with OCR in addition to identify objects. The prototype code can be used to recognise text, for instance during grocery shopping the prototype can recognise text and provide a text to speech output for the user which can identify the item name. Further functions are added and described in detail as below.
 
 We're committed to make our product as simple and user-friendly as we can in order to enhance quality of life.
 
@@ -64,6 +64,14 @@ wiringPiISR(8, INT_EDGE_RISING, start_ocr);
 Moreover, to maintain a robust and flexible codebase, we have applied the SOLID design principles. This means that each class in our project has only one responsibility, and new functions can be added without needing to modify the existing code. This approach allows us to easily extend and modify our code as needed, making it more maintainable and less error-prone in the long run.
 
 ---------------------------------------------------------------------------
+##OCR Function
+The aim of the OCR function is to read the text from an image that is captured from the instruction of the user. The aim of the function is to read out the labels, ingrediants and allergens. At present we have acheived label detection and further processing is required to locate ingredients and allergens. The detailed flowchart is as follows
+
+<p align="center">
+<img src="Images/OCRFlowchart.png" width="250" height="250">
+</p>
+
+
 ## Components List
 
 
