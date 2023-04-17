@@ -35,7 +35,7 @@ Once the required software is installed, follow these steps:
 git clone https://github.com/NavneetKanna/Embedded-Iris.git
 ```
 
-- Open the folder and run CMake
+- Open the 'Embedded-Iris' folder and run CMake
 ```bash
 cd Embedded-Iris
 mkdir build
@@ -44,7 +44,7 @@ cmake ..
 make
 ```
 
-- If everything was successful run the executable embeddediris 
+- If everything was successful run the executable 
 ```bash
 ./embeddediris
 ```
