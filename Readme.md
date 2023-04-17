@@ -17,7 +17,10 @@ We're committed to make our product as simple and user-friendly as we can in ord
 
 Rapberry Pi 3 Model B+
 
-![raspberry pi](https://user-images.githubusercontent.com/123874995/226483366-cadbc80d-25ac-475b-89a8-7435614effe1.jpg)
+<!-- ![raspberry pi](https://user-images.githubusercontent.com/123874995/226483366-cadbc80d-25ac-475b-89a8-7435614effe1.jpg) -->
+
+
+<img src="https://user-images.githubusercontent.com/123874995/226483366-cadbc80d-25ac-475b-89a8-7435614effe1.jpg" width="20">
 
 The Raspberry Pi 3 Model B+ is the final revision in the Raspberry Pi 3 range.
 Broadcom BCM2837B0, Cortex-A53 (ARMv8)
