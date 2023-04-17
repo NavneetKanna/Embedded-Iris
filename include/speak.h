@@ -1,4 +1,3 @@
-#include <espeak-ng/speak_lib.h>
 #include <string>
 
 using namespace std;
