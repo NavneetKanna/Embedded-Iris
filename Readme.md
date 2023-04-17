@@ -64,11 +64,11 @@ wiringPiISR(8, INT_EDGE_RISING, start_ocr);
 Moreover, to maintain a robust and flexible codebase, we have applied the SOLID design principles. This means that each class in our project has only one responsibility, and new functions can be added without needing to modify the existing code. This approach allows us to easily extend and modify our code as needed, making it more maintainable and less error-prone in the long run.
 
 ---------------------------------------------------------------------------
-##OCR Function
+## OCR Function
 The aim of the OCR function is to read the text from an image that is captured from the instruction of the user. The aim of the function is to read out the labels, ingrediants and allergens. At present we have acheived label detection and further processing is required to locate ingredients and allergens. The detailed flowchart is as follows
 
 <p align="center">
-<img src="Images/OCRFlowchart.png" width="250" height="250">
+<img src="Images/OCR_flowchart.png" width="400" height="400">
 </p>
 
 
