@@ -154,7 +154,11 @@ Transmitter diameter: 8mm
 
 # Social Media
 
-<a href="https://www.instagram.com/_embedded_iris_/" target="_blank"><img src="https://github.com/NavneetKanna/Embedded-Iris/blob/Documentation/Images/instagram.png?raw=true" width="30px" height="30px"></a>
 
-
-<a href="https://www.youtube.com/@sisinsaju3942" target="_blank"><img src="https://github.com/NavneetKanna/Embedded-Iris/blob/Documentation/Images/youtube-logo-png-2069.png?raw=true" width="30px" height="30px"></a>
+<div>
+   <a href="https://www.instagram.com/_embedded_iris_/" target="_blank"><img src="https://github.com/NavneetKanna/Embedded-Iris/blob/Documentation/Images/instagram.png?raw=true" alt="Instagram Logo" width="30px" height="30px">
+   </a>
+   
+   <a href="https://www.youtube.com/@sisinsaju3942" target="_blank"><img src="https://github.com/NavneetKanna/Embedded-Iris/blob/Documentation/Images/youtube-logo-png-2069.png?raw=true" alt="Youtube Logo" width="50px" height="30px">
+   </a>
+</div>
