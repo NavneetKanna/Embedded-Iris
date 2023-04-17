@@ -56,7 +56,7 @@ make
 Here is the final product of our project:
 
 <p align="center">
-<img src="https://github.com/NavneetKanna/Embedded-Iris/blob/Documentation/Images/Logo.jpeg?raw=true" width="250" height="250">
+<img src="https://github.com/NavneetKanna/Embedded-Iris/blob/main/Images/final.jpg?raw=true" width="250" height="250">
 </p>
 
 To use the project, the first step is to turn on the Raspberry Pi and run the executable. Once the program is running, you should hear the message "Embedded Iris is now ready to use". At this point, the program waits for the user to press one of the buttons, which triggers a specific task via interrupts and callbacks.
@@ -64,13 +64,13 @@ To use the project, the first step is to turn on the Raspberry Pi and run the ex
 The image below shows the three buttons available in our project:
 
 <p align="center">
-<img src="https://github.com/NavneetKanna/Embedded-Iris/blob/Documentation/Images/Logo.jpeg?raw=true" width="250" height="250">
+<img src="https://github.com/NavneetKanna/Embedded-Iris/blob/main/Images/buttons.jpeg?raw=true" width="250" height="250">
 </p>
 
 The first button is for object detection, the second for OCR, and the third for obstacle detection.From the image above the first button is for Object Detection, the second for OCR and the third one for Obstacle Detection.
 
 <p align="center">
-<img src="https://github.com/NavneetKanna/Embedded-Iris/blob/Documentation/Images/Logo.jpeg?raw=true" width="250" height="250">
+<img src="https://github.com/NavneetKanna/Embedded-Iris/blob/main/Images/poweroff_butn.jpeg?raw=true" width="250" height="250">
 </p>
 
 
