@@ -81,7 +81,7 @@ Power-over-Ethernet (PE) support (requires separate PoE HAT)
 
 
 
-### 1) Raspberry Pi Camera Module
+### Raspberry Pi Camera Module
 
 
 <!--![camera](https://user-images.githubusercontent.com/123874995/226483843-fc016b75-4409-4163-ad12-c366a93adab9.jpg)-->
@@ -114,7 +114,7 @@ Used for the following functions
 
 
 
-### 2) Speaker
+### Speaker
 
 
 <!-- ![speaker](https://user-images.githubusercontent.com/123874995/226483982-50e1fff4-3a23-476d-913d-df26029bef34.jpg) -->
@@ -125,11 +125,9 @@ Used for the following functions
 
 Plug and Play Audio Amplifier has a class D audio amplifier on board and little 1 Watt 8 ohm speaker
 
-#### Usage
-1) For text to speech synthesis
 
 
-### 3) Ultrasonic Sensor
+### Ultrasonic Sensor
 
 
 <!--![sensor](https://user-images.githubusercontent.com/123874995/226484137-40c85848-4b2a-4787-aa1e-1b5fdaeb2950.jpg) -->
@@ -158,25 +156,15 @@ Transmitter diameter: 8mm
 
 #### Usage
 1) Obstacle Detection
------------------------------------------------------------------------------------
 
-### 4) Tactile Switch Buttons
+### Tactile Switch Buttons
 Dimension: 12 x 6
-
-
 
 #### Usage 
 1) Fucntion Calling
 2) Power Off
 
-
-
-
-
-
-
-
-
+-----------------------------------------------------------------------------------
 
 
 ### Social Media
