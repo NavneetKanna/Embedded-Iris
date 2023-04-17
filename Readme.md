@@ -76,6 +76,13 @@ The first button is for object detection, the second for OCR, and the third for 
 
 Finally, to power off the program, the user can press this button. This button is used to poweroff the program. Once we hear the message saying that "Embedded Iris is shutting down" it means the program has successfully stopped.
 
+
+You can download the yolo model from the dataset folder and store in your device and change the path to the model here.
+
+```cpp
+net_ = readNet("/path/to/yolov5s.onnx");
+```
+
 ---------------------------------------------------------------------------
 
 
