@@ -67,16 +67,26 @@ void Speak::text_to_speech(string text){
    unsigned int position = 0, end_position = 0, flags = espeakCHARS_AUTO;
    espeak_Initialize(output, buflength, path, espeakINITIALIZE_PHONEME_EVENTS);
    espeak_SetVoiceByName(voicename);
-   espeak_Synth(text.c_str(), buflength, position, position_type, end_position, flags, identifier, user_data);
+   espeak_Synth(tta.c_str(), buflength, position, position_type, end_position, flags, identifier, user_data);
+   } else {
+      std::cout<<"in else"<<std::endl;
+      std::string temp = remove_newline(text);
+      std::string temp2 = remove_special_chars(temp.c_str());
+      std::string tta = temp2;
+      char voicename[] = {"English"}; 
+      int buflength = 1024, options = 0;
+      position_type = POS_CHARACTER;
+      unsigned int position = 0, end_position = 0, flags = espeakCHARS_AUTO;
+      espeak_Initialize(output, buflength, path, espeakINITIALIZE_PHONEME_EVENTS);
+      espeak_SetVoiceByName(voicename);  
+      espeak_Synth(tta.c_str(), buflength, position, position_type, end_position, flags, identifier, user_data);
+   }
+   
    //espeak_Synth(text.c_str(), std::strlen(text.c_str)), position, position_type, end_position, flags, identifier, NULL, NULL);
-   std::cout<<"before"<<std::endl;
-  // espeak_Cancel();
    std::cout<<"before 1"<<std::endl;
    //espeak_Synchronize();
    std::cout<<"before 2"<<std::endl;
-   //espeak_Cancel();
-   std::cout<<"before 3"<<std::endl;
-   espeak_Terminate();
+   //espeak_Terminate();
    std::cout<<"Last"<<std::endl;
    
    
