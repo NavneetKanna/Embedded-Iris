@@ -29,46 +29,37 @@ OD::OD() {
 
     // Load model.
     net_ = readNet("/home/pi/Lab/yolov5s.onnx"); 
-
-    std::cout<<"Finished init of OD"<<std::endl;
 }
 
 void OD::get_image(){
-   std::cout<<"Capture image in OD"<<std::endl;
    char command[100];
    snprintf(command, sizeof(command), "libcamera-jpeg -o image.jpg --nopreview  -t1000 --rotation 180 2>/dev/null");
-   std::cout<<"Finished"<<std::endl;
 
    // Launch the command and capture its output
    FILE* pipe = popen(command, "r");
    if (!pipe) {
-      perror("popen failed");
-     //TODO: Output to speak the error  
+      Speak speak;
+      speak.text_to_speech("popen failed");
    }
     
    // Wait for the command to finish
    pclose(pipe);
-   std::cout<<"Finished closing pipe"<<std::endl;
 }
 
 void OD::start(){
-    std::cout<<"in OD start"<<std::endl;
     std::thread t(&OD::predict, this);
     t.detach();
-    std::cout<<"detached thread"<<std::endl;
 }
 
 void OD::predict() {
-    std::cout<<"In OD predict"<<std::endl;
-   // get_image();
+    get_image();
     // Read the image
-    //Mat input_image = imread("image.jpg");
-    Mat input_image = imread("test1.jpg");
-    //Mat re;
-    //resize(input_image, re, Size(1280, 720));
+    Mat input_image = imread("image.jpg");
+    Mat re;
+    resize(input_image, re, Size(1280, 720));
     // Convert to blob.
     Mat blob;
-    blobFromImage(input_image, blob, 1./255., Size(INPUT_WIDTH, INPUT_HEIGHT), Scalar(), true, false);
+    blobFromImage(re, blob, 1./255., Size(INPUT_WIDTH, INPUT_HEIGHT), Scalar(), true, false);
 
     net_.setInput(blob);
 
@@ -82,8 +73,8 @@ void OD::predict() {
     vector<Rect> boxes; 
 
     // Resizing factor.
-    float x_factor = input_image.cols / INPUT_WIDTH;
-    float y_factor = input_image.rows / INPUT_HEIGHT;
+    float x_factor = re.cols / INPUT_WIDTH;
+    float y_factor = re.rows / INPUT_HEIGHT;
 
     float *data = (float *)outputs[0].data;
 
@@ -138,14 +129,13 @@ void OD::predict() {
 	// Get the label for the class name and its confidence.
 	label = format("%.2f", confidences[idx]);
 	label = class_name[class_ids[idx]];
-	std::cout<<"predicted od  " <<std::endl;
     }
     Speak speak;
     speak.text_to_speech(label);
-    std::cout<<"Finished od"<<std::endl;
 }
 
 // Getter
 std::string OD::get_predicted_label(){
     return label;
 }
+
