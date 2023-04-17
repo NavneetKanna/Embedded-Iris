@@ -53,10 +53,6 @@ make
 
 ## Components List
 
-
-https://github.com/NavneetKanna/Embedded-Iris/blob/Documentation/Images/Raspberry%20pi.jpg?raw=true
-Rapberry Pi 3 Model B+
-
 <!-- ![raspberry pi](https://user-images.githubusercontent.com/123874995/226483366-cadbc80d-25ac-475b-89a8-7435614effe1.jpg) -->
 
 <p align="center">
