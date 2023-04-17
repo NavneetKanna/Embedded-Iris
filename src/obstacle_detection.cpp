@@ -1,10 +1,10 @@
 #include <iostream>
 #include <wiringPi.h>
 #include <unistd.h>
-#include "obstacle_detection.h"
 #include <thread>
-#include "speak.h"
 #include <chrono>
+#include "../include/obstacle_detection.h"
+#include "../include/speak.h"
 
 #define TRIG_PIN 6
 #define ECHO_PIN 10

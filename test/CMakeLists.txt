@@ -26,8 +26,8 @@ find_library(WIRINGPI_LIBRARIES NAMES wiringPi)
 
 
 #../ocr.cpp ../od.cpp ../obstacle_detection.cpp ../speak.cpp
-add_executable(ocrtest TestOCR.cpp  ../ocr.cpp ../speak.cpp)
-add_executable(odtest TestOD.cpp ../od.cpp ../speak.cpp)
+add_executable(ocrtest TestOCR.cpp  ../src/ocr.cpp ../src/speak.cpp)
+add_executable(odtest TestOD.cpp ../src/od.cpp ../src/speak.cpp)
 
 #../ocr.cpp  ../obstacle_detection.cpp
 #../od.cpp ../obstacle_detection.cpp

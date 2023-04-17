@@ -4,9 +4,8 @@
 #include <vector>
 #include <string>
 #include <thread>
-#include "speak.h"
-
-#include "od.h"
+#include "../include/speak.h"
+#include "../include/od.h"
 
 using namespace cv;
 using namespace std;

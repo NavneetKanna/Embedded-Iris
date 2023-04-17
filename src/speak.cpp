@@ -1,6 +1,6 @@
 #include <espeak-ng/speak_lib.h>
 #include <string>
-#include "speak.h"
+#include "../include/speak.h"
 #include <iostream>
 #include <memory>
 #include <cstring>

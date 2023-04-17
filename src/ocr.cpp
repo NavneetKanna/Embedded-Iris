@@ -10,8 +10,8 @@
 #include <opencv2/highgui.hpp>
 #include <opencv2/dnn.hpp>
 #include <sstream>
-#include "speak.h"
-#include "ocr.h"
+#include "../include/speak.h"
+#include "../include/ocr.h"
 
 using namespace cv;
 using namespace std;

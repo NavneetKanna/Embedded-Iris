@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../ocr.h"
+#include "../include/ocr.h"
 #include <iostream>
 #include <fstream>
 

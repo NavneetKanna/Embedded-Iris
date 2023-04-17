@@ -3,15 +3,16 @@
 #include <wiringPi.h>
 //#include <pigpio.h>
 
-#include "ocr.h"
-#include "od.h"
-#include "obstacle_detection.h"
+#include "../include/ocr.h"
+#include "../include/od.h"
+#include "../obstacle_detection.h"
+#include "../include/speak.h"
+
 
 #include <opencv2/opencv.hpp>
 #include <cstdint>
-
 #include <sstream>
-#include "speak.h"
+#include <cstdio>
 
 // TODO: Delete images
 
@@ -36,9 +37,15 @@ ObstacleDetection obs;
 void poweroff(){
     if (poweroff_flag) {
         poweroff_flag = false;
-        std::cout<<"Finishing main"<<std::endl;
-        flag = false;
         Speak speak;
+        std::cout<<"Finishing main"<<std::endl;
+        const char* filename = "example.png";
+        if (std::remove(filename) != 0) {
+            speak.text_to_speech("Error deleting image")
+        } else {
+            speak.text_to_speech("Image successfully deleted");
+        }
+        flag = false;
         speak.text_to_speech("EmbeddedIris is shutting down");
     }
 }
@@ -85,36 +92,25 @@ int main() {
     pinMode(13, INPUT); 
     std::cout<<" Setting pin 9 for interrupt "<<std::endl;
     wiringPiISR(13, INT_EDGE_RISING, start_obs); 
-    //wiringPiISR(1, INT_EDGE_RISING, [&od]() { std::thread od_t(&OD::predict, &od); od_t.detach(); }); 
-    
     
     // OCR -> GPIO
     pinMode(14, INPUT); 
     std::cout<<" Setting pin 8 for interrupt "<<std::endl;
     wiringPiISR(14, INT_EDGE_RISING, start_ocr); 
-    //wiringPiISR(1, INT_EDGE_RISING, [&ocr]() { std::thread ocr_t(&OCR::perform_ocr, &ocr); ocr_t.detach(); }); 
-    
     
     // Obstacle Detection -> GPIO
     pinMode(3, INPUT); 
     std::cout<<" Setting pin 7 for interrupt "<<std::endl;
     wiringPiISR(3, INT_EDGE_RISING, start_obs);
-    /*wiringPiISR(1, INT_EDGE_RISING, [&obsdetect, &is_sensor_on]() { 
-       
-    });*/
     
     // Poweroff
-   pinMode(12, INPUT); 
-   std::cout<<" Setting pin 12 for interrupt "<<std::endl;
-   wiringPiISR(12, INT_EDGE_RISING, poweroff);
-   //wiringPiISR(12, INT_EDGE_RISING, start_od);
-    
+    pinMode(12, INPUT); 
+    std::cout<<" Setting pin 12 for interrupt "<<std::endl;
+    wiringPiISR(12, INT_EDGE_RISING, poweroff);
     
     std::cout<<"while"<<std::endl;
     while(flag) {}
     std::cout<<"after while"<<std::endl;
-	
    
-
-   // return 0;
+    return 0;
 }
