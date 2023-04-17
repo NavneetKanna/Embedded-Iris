@@ -51,6 +51,19 @@ make
 
 ---------------------------------------------------------------------------
 
+## Real-Time Coding
+
+To ensure that our project is responsive in real-time, we have implemented interrupts and callbacks. Specifically, for each button in our project, we have set up an interrupt that utilizes a callback function to invoke the relevant methods.
+
+To achieve this, we are using a routine called wiringPiISR() from the wiringPi library. Here is an example usage where we set up an interrupt for GPIO pin 8 that triggers when the button is pushed and calls the start_ocr() function:
+
+```cpp
+wiringPiISR(8, INT_EDGE_RISING, start_ocr);
+```
+
+Moreover, to maintain a robust and flexible codebase, we have applied the SOLID design principles. This means that each class in our project has only one responsibility, and new functions can be added without needing to modify the existing code. This approach allows us to easily extend and modify our code as needed, making it more maintainable and less error-prone in the long run.
+
+---------------------------------------------------------------------------
 ## Components List
 
 
