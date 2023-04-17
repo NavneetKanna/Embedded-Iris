@@ -23,13 +23,13 @@ include_directories(
 )
 
 SET(LIBRARY_SOURCES
-  main.cpp 
-  ocr.cpp 
-  od.cpp 
-  obstacle_detection.cpp 
-  speak.cpp
+  src/main.cpp 
+  src/ocr.cpp 
+  src/od.cpp 
+  src/obstacle_detection.cpp 
+  src/speak.cpp
 )
-add_executable(embeddediris  main.cpp ocr.cpp od.cpp obstacle_detection.cpp speak.cpp)
+add_executable(embeddediris  src/main.cpp src/ocr.cpp src/od.cpp src/obstacle_detection.cpp src/speak.cpp)
 #add_library(libb STATIC ${LIBRARY_SOURCES})
 
 add_subdirectory(test)

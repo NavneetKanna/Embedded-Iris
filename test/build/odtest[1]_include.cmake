@@ -1,0 +1,5 @@
+if(EXISTS "/home/pi/Lab/test/build/odtest[1]_tests.cmake")
+  include("/home/pi/Lab/test/build/odtest[1]_tests.cmake")
+else()
+  add_test(odtest_NOT_BUILT odtest_NOT_BUILT)
+endif()
