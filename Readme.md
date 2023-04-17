@@ -53,7 +53,8 @@ make
 
 ## Components List
 
-<!-- ![raspberry pi](https://user-images.githubusercontent.com/123874995/226483366-cadbc80d-25ac-475b-89a8-7435614effe1.jpg) -->
+
+### Raspberry Pi 
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/123874995/226483366-cadbc80d-25ac-475b-89a8-7435614effe1.jpg" width="250" height="250">
