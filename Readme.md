@@ -99,6 +99,21 @@ wiringPiISR(8, INT_EDGE_RISING, start_ocr);
 
 Moreover, to maintain a robust and flexible codebase, we have applied the SOLID design principles. This means that each class in our project has only one responsibility, and new functions can be added without needing to modify the existing code. This approach allows us to easily extend and modify our code as needed, making it more maintainable and less error-prone in the long run.
 
+
+---------------------------------------------------------------------------
+## Unit Testing
+
+To test if everything is working correctly you can run the tests as shown
+
+```bash
+cd test
+mkdir build
+cd buld
+cmake ..
+make
+```
+
+
 ---------------------------------------------------------------------------
 ## Components List
 
