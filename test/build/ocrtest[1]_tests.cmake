@@ -1,5 +1,0 @@
-add_test( OCRTest.GetImageTest /home/pi/Lab/test/build/ocrtest [==[--gtest_filter=OCRTest.GetImageTest]==] --gtest_also_run_disabled_tests)
-set_tests_properties( OCRTest.GetImageTest PROPERTIES WORKING_DIRECTORY /home/pi/Lab/test/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-add_test( OCRTest.PerformOcrTest /home/pi/Lab/test/build/ocrtest [==[--gtest_filter=OCRTest.PerformOcrTest]==] --gtest_also_run_disabled_tests)
-set_tests_properties( OCRTest.PerformOcrTest PROPERTIES WORKING_DIRECTORY /home/pi/Lab/test/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set( ocrtest_TESTS OCRTest.GetImageTest OCRTest.PerformOcrTest)

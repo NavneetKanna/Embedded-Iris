@@ -1,5 +1,0 @@
-if(EXISTS "/home/pi/Lab/test/build/ocrtest[1]_tests.cmake")
-  include("/home/pi/Lab/test/build/ocrtest[1]_tests.cmake")
-else()
-  add_test(ocrtest_NOT_BUILT ocrtest_NOT_BUILT)
-endif()

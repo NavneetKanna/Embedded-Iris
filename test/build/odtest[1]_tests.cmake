@@ -1,5 +1,0 @@
-add_test( ODTest.GetImageTest /home/pi/Lab/test/build/odtest [==[--gtest_filter=ODTest.GetImageTest]==] --gtest_also_run_disabled_tests)
-set_tests_properties( ODTest.GetImageTest PROPERTIES WORKING_DIRECTORY /home/pi/Lab/test/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-add_test( ODTest.PerformODTest /home/pi/Lab/test/build/odtest [==[--gtest_filter=ODTest.PerformODTest]==] --gtest_also_run_disabled_tests)
-set_tests_properties( ODTest.PerformODTest PROPERTIES WORKING_DIRECTORY /home/pi/Lab/test/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set( odtest_TESTS ODTest.GetImageTest ODTest.PerformODTest)
