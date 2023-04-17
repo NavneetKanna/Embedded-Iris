@@ -7,7 +7,7 @@
 </p>
 
 
-Welcome to our course project for the Embedded Lab! Our goal is to improve the daily lives of people who are blind or visually impaired. We created a novel wearable that combines a Raspberry Pi 3, a camera, and a speaker to offer users text-to-speech functionality and real-time object identification.
+Welcome to our course project for the Embedded Lab! Our goal is to assist the visually imapired in their daily lives. We created a novel wearable that combines a Raspberry Pi 3, a camera, and a speaker to assist text-to-speech functionality and real-time object identification.
 
 Our device can presently recognise objects and text in real-time thanks to OCR and object detection technologies. Imagine using our technology to read out the names of each item you pass by as you browse a supermarket. Alternatively, hearing the titles of labels and signs surrounding you as you walk down a crowded street.
 
@@ -16,7 +16,7 @@ We're committed to make our product as simple and user-friendly as we can in ord
 
 ---------------------------------------------------------------------------
 
-# Software Dependencies
+## Software Dependencies
 
 - [Raspberry Pi OS](https://www.raspberrypi.com/software/)
 - [CMake](https://cmake.org/download/)
@@ -26,7 +26,7 @@ We're committed to make our product as simple and user-friendly as we can in ord
 - eSpeak
 
 
-# Installation and usage
+## Installation and usage
 
 Once the required software is installed, follow these steps:
 
@@ -51,7 +51,7 @@ make
 
 ---------------------------------------------------------------------------
 
-# Components List
+## Components List
 
 
 https://github.com/NavneetKanna/Embedded-Iris/blob/Documentation/Images/Raspberry%20pi.jpg?raw=true
@@ -81,7 +81,7 @@ Power-over-Ethernet (PE) support (requires separate PoE HAT)
 
 
 
-Raspberry Pi Camera Module
+### Raspberry Pi Camera Module
 
 
 <!--![camera](https://user-images.githubusercontent.com/123874995/226483843-fc016b75-4409-4163-ad12-c366a93adab9.jpg)-->
@@ -107,9 +107,14 @@ Diagonal field of view 75 degrees (at 16:9)
 35mm equivalent focal length roughly 28mm (full width) - 30mm (3:2 crop)
 Focus 10cm - infinity
 
+#### Usage 
+Used for the following functions
+1) OCR
+2) Object Detection
 
 
-Speaker
+
+### Speaker
 
 
 <!-- ![speaker](https://user-images.githubusercontent.com/123874995/226483982-50e1fff4-3a23-476d-913d-df26029bef34.jpg) -->
@@ -120,9 +125,11 @@ Speaker
 
 Plug and Play Audio Amplifier has a class D audio amplifier on board and little 1 Watt 8 ohm speaker
 
+#### Usage
+1) For text to speech synthesis
 
 
-Ultrasonic Sensor
+### Ultrasonic Sensor
 
 
 <!--![sensor](https://user-images.githubusercontent.com/123874995/226484137-40c85848-4b2a-4787-aa1e-1b5fdaeb2950.jpg) -->
@@ -148,11 +155,31 @@ Centre screw hole distance: 40mm × 15mm
 Screw hole diameter: 1mm (M1)
 Transmitter diameter: 8mm
 
+
+#### Usage
+1) Obstacle Detection
 -----------------------------------------------------------------------------------
 
+### Tactile Switch Buttons
+Dimension: 12 x 6
 
 
-# Social Media
+
+#### Usage 
+1) Fucntion Calling
+2) Power Off
+
+
+
+
+
+
+
+
+
+
+
+### Social Media
 
 <!-- Needed to display sideways -->
 
