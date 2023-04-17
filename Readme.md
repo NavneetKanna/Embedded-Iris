@@ -154,71 +154,23 @@ Transmitter diameter: 8mm
 
 # Social Media
 
-<!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial -->
+<!-- Needed to display sideways -->
 
 <!-- display the social media buttons in your README -->
 
 [![alt text][1.1]][1]
 [![alt text][2.1]][2]
-[![alt text][3.1]][3]
-[![alt text][4.1]][4]
-[![alt text][5.1]][5]
-[![alt text][6.1]][6]
-
-
-<!-- links to social media icons -->
-<!-- no need to change these -->
 
 <!-- icons with padding -->
 
-[1.1]: http://i.imgur.com/tXSoThF.png (twitter icon with padding)
-[2.1]: http://i.imgur.com/P3YfQoD.png (facebook icon with padding)
-[3.1]: http://i.imgur.com/yCsTjba.png (google plus icon with padding)
-[4.1]: http://i.imgur.com/YckIOms.png (tumblr icon with padding)
-[5.1]: http://i.imgur.com/1AGmwO3.png (dribbble icon with padding)
-[6.1]: http://i.imgur.com/0o48UoR.png (github icon with padding)
-
-<!-- icons without padding -->
-
-[1.2]: http://i.imgur.com/wWzX9uB.png (twitter icon without padding)
-[2.2]: http://i.imgur.com/fep1WsG.png (facebook icon without padding)
-[3.2]: http://i.imgur.com/VlgBKQ9.png (google plus icon without padding)
-[4.2]: http://i.imgur.com/jDRp47c.png (tumblr icon without padding)
-[5.2]: http://i.imgur.com/Vvy3Kru.png (dribbble icon without padding)
-[6.2]: http://i.imgur.com/9I6NRUm.png (github icon without padding)
+[1.1]: https://github.com/NavneetKanna/Embedded-Iris/blob/Documentation/Images/instagramm.png?raw=true (instagram logo)
+[2.1]: https://github.com/NavneetKanna/Embedded-Iris/blob/Documentation/Images/youtube.png?raw=true (facebook logo)
 
 
 <!-- links to your social media accounts -->
 <!-- update these accordingly -->
 
-[1]: http://www.twitter.com/carlsednaoui
-[2]: http://www.facebook.com/sednaoui
-[3]: https://plus.google.com/+CarlSednaoui
-[4]: http://carlsed.tumblr.com
-[5]: http://dribbble.com/carlsednaoui
-[6]: http://www.github.com/carlsednaoui
-
-<!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial -->
-
-
-
-
-
-<!--
-[![instagram](https://github.com/NavneetKanna/Embedded-Iris/blob/Documentation/Images/instagram.png?raw=true (Instagram))][1]
-[![youtube](https://github.com/NavneetKanna/Embedded-Iris/blob/Documentation/Images/youtube-logo-png-2069.png?raw=true (Youtube))][2]
-
 [1]: https://www.instagram.com/_embedded_iris_/
-[2]: https://www.youtube.com/@sisinsaju3942
+[2]: https://www.youtube.com/@sisinsaju3942http://www.facebook.com/sednaoui
 
--->
-<!--
-<div>
-   <a href="https://www.instagram.com/_embedded_iris_/" target="_blank"><img src="https://github.com/NavneetKanna/Embedded-Iris/blob/Documentation/Images/instagram.png?raw=true" alt="Instagram Logo" width="30px" height="30px">
-   </a>
-   
-   <a href="https://www.youtube.com/@sisinsaju3942" target="_blank"><img src="https://github.com/NavneetKanna/Embedded-Iris/blob/Documentation/Images/youtube-logo-png-2069.png?raw=true" alt="Youtube Logo" width="50px" height="30px">
-   </a>
-</div>
-
--->
+<!-- Needed to display sideways-->
